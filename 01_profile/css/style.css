@@ -1,0 +1,238 @@
+/* 共通のスタイル */
+body {
+  color: #000000;
+  background-color: #ffffff;
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 18px;
+  margin: 0 auto;
+}
+
+nav,
+h2,
+h1 {
+  font-size: 34px;
+  font-weight: 700;
+}
+
+h2 {
+  text-align: center;
+}
+h3 {
+  font-size: 24px;
+}
+
+p {
+  font-weight: 500;
+}
+
+nav a {
+  color: #000000;
+  text-decoration: none;
+}
+nav a:visited {
+  color: #000000;
+  text-decoration: none;
+}
+nav a:link {
+  color: #000000;
+  text-decoration: none;
+}
+nav a:hover {
+  color: #000000;
+  text-decoration: none;
+}
+nav a:active {
+  color: #000000;
+  text-decoration: none;
+}
+
+/* PCスタイル */
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.nav ul {
+  display: flex;
+  list-style: none;
+  gap: 18px;
+}
+
+.nav li {
+  height: 49px;
+}
+
+.title {
+  padding: 3px 19px;
+  height: 51px;
+  border: 1px solid;
+}
+
+/* About */
+.about {
+  margin: 72px auto 0 auto;
+}
+
+.about-img {
+  border-radius: 140px;
+}
+.about-div {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+}
+.about-description {
+  margin-top: 20px;
+}
+
+/* Works */
+.works {
+  margin: 72px auto 0 auto;
+}
+
+.works-div {
+  display: flex;
+  justify-content: center;
+  max-width: 960px;
+  margin: 0 auto;
+  gap: 16px;
+}
+.works-div div {
+  width: 100%;
+}
+
+.works-div img {
+  width: 100%;
+}
+
+footer {
+  margin-top: 72px;
+  text-align: center;
+}
+
+/* スマホスタイル */
+@media screen and (max-width: 767px) {
+  /* common */
+  body {
+    margin: 0 auto;
+  }
+  /* header */
+  header {
+    width: 100%;
+  }
+  .title {
+    font-size: 28px;
+    height: 42px;
+  }
+  .nav {
+    font-size: 21px;
+  }
+  .nav ul {
+    padding-top: 5px;
+  }
+  .nav li {
+    height: 30px;
+  }
+  /* About */
+  .about {
+    width: 100%;
+    height: auto;
+    margin: 72px 0;
+  }
+  .about-div {
+    flex-direction: column;
+    align-items: center;
+  }
+  .about-img {
+    height: 280px;
+    width: 280px;
+  }
+  #name {
+    margin-left: 20px;
+  }
+  .about-description {
+    margin-top: 0;
+  }
+
+  /* Works */
+  .works {
+    width: 100%;
+    margin: 1px auto;
+  }
+  .works-div {
+    flex-direction: column;
+    align-items: center;
+    gap: 44px;
+    padding: 0 10px;
+    text-align: center;
+  }
+}
+
+/*===========jQuery発展編===========*/
+
+/* カルーセル */
+.carouselImg {
+  width: 100%;
+  margin: 0 0;
+}
+
+/* TOPボタン */
+.topBtn {
+  display: none;
+  position: fixed;
+  right: 20px;
+  bottom: 50px;
+  background-color: #000000;
+  color: #ffffff;
+  padding: 25px 20px;
+  border-radius: 50%;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* スクロール時のフェードイン */
+section {
+  opacity: 0;
+  transition: 1s;
+}
+.fade-in {
+  opacity: 1;
+}
+
+/* モーダル */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+}
+
+.bigImg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 80%;
+  max-width: 800px;
+  margin: auto;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: white;
+  font-size: 40px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
